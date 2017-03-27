@@ -11,6 +11,9 @@ public class ScrollBonus : MonoBehaviour {
     void Start()
     {
         //set bonus initial position
+        //Vector3 position = new Vector3(10, Random.Range(-5.0f, 3.0f), 0);
+        //transform.position = position;
+
     }
 
     // Update is called once per frame
