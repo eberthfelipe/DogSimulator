@@ -15,7 +15,11 @@ public class BonusManager : MonoBehaviour {
     public float spawnTime = 2f;
     // Use this for initialization
     void Start () {
-        //Instantiate(nestedBonusDogPrefab);
+        //prefab = GetComponent<GameObject>();
+        nestedBonusDogPrefab = GetComponent<NestedPrefab>();
+        //transform = nestedBonusDogPrefab.transform;
+        //Instantiate(transform);
+        //Instantiate(prefab);
         InvokeRepeating("createBonusObject", spawnTime, spawnTime);
 	}
 	
@@ -32,8 +36,9 @@ public class BonusManager : MonoBehaviour {
         //transform.position = position;
 
         //prefab.GetComponent<NestedPrefab>().GeneratePrefabs();
-        //Instantiate(nestedBonusDogPrefab).GeneratePrefabs();
-        nestedBonusDogPrefab.GeneratePrefabs();
+        //nestedBonusDogPrefab.GeneratePrefabs();
+
+        GetComponent("BonusDogPrefab").GetComponent<NestedPrefab>().GeneratePrefabs();
 
     }
 
