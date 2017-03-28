@@ -14,7 +14,8 @@ public class ShareScreenshot : MonoBehaviour {
     public void shareScreenshot()
     {
 
-        if (!isProcessing && GameObject.Find("Ask Friend").GetComponent<Image>().enabled)
+        //if (!isProcessing && GameObject.Find("Ask Friend").GetComponent<Image>().enabled)
+        if (!isProcessing)
             StartCoroutine(captureScreenshot());
     }
 
